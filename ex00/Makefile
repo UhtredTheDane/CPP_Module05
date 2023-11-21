@@ -11,9 +11,9 @@
 # **************************************************************************** #
 
 CC = c++
-CFLAGS = -std=c++98 -MMD
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD
 NAME = first_cog
-SRC= BureauCrat.cpp main.cpp
+SRC= Bureaucrat.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}
 

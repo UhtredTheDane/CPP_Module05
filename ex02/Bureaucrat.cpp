@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:36:02 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/20 14:04:02 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:06:49 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
  
@@ -49,17 +49,36 @@ BureauCrat::~BureauCrat(void)
 	std::cout << "BureauCrat's destructor called" << std::endl;
 }
 
-std::string const& BureauCrat::getName() const
+void BureauCrat::signForm(AForm& f)
+{
+	try
+	{
+		f.beSigned(*this);
+		std::cout << *this <<  " signed " << f << std::endl;
+	}
+	catch(std::exception& e)
+	{
+		std::cout << *this <<  " couldn't signed " << f << " because "
+			<< e.what() <<std::endl;	
+	}
+}
+
+void BureauCrat::executeForm(AForm const& form)
+{
+	form.execute(*this);
+}
+
+std::string const& BureauCrat::getName(void) const
 {
 	return (name);
 }
 
-int BureauCrat::getGrade() const
+int BureauCrat::getGrade(void) const
 {
 	return (grade);
 }
 
-void BureauCrat::increment()
+void BureauCrat::increment(void)
 {
 	if (this->grade - 1 < 1)
 		throw (BureauCrat::GradeTooHighException());
@@ -67,7 +86,7 @@ void BureauCrat::increment()
 	std::cout << "You have been promoted !" << std::endl;
 }
 
-void BureauCrat::decrement()
+void BureauCrat::decrement(void)
 {
 	if (this->grade + 1 > 150)
 		throw (BureauCrat::GradeTooLowException());
@@ -87,6 +106,6 @@ const char *BureauCrat::GradeTooLowException::what(void) const throw()
 
 std::ostream &operator<<(std::ostream &flux, BureauCrat const& b)
 {
-	flux << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
+	flux << b.getName() << ", bureaucrat grade " << b.getGrade();
 	return (flux);
 }

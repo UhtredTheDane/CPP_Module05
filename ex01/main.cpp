@@ -6,37 +6,43 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:33:52 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/20 15:38:49 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/11/21 14:28:08 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main(void)
 {
 	try
 	{
-		BureauCrat ms;
-		std::cout << ms;
-		ms.increment();
+		Form f("Registration", -1, 150);
 	}
-	catch (std::exception const& e)
-	{
-		std::cout << e.what() << std::endl << std::endl;
+	catch(std::exception& e)
+	{	
+		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	try
 	{
-		BureauCrat ds("Dwight Shrute", 150);
-		std::cout << ds;
-		ds.decrement();	
+		Form f("Registration", 1, 151);
 	}
-	catch (std::exception const& e)
-	{
-		std::cout << e.what() << std::endl << std::endl;
+	catch(std::exception& e)
+	{	
+		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
+	
+	Form f1;
+	std::cout << f1;
 	BureauCrat ms;
+	ms.signForm(f1);
+	std::cout << std::endl;
+	
+	Form f2("Housing", 149, 149);
+	std::cout << f2 << std::endl;
 	BureauCrat ds("Dwight Shrute", 150);
-	ms = ds;
-	std::cout << ms << std::endl;
+	ds.signForm(f2);
+	std::cout << f2 << std::endl << std::endl;
 	return (0);
 }

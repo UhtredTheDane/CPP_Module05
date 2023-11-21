@@ -6,14 +6,14 @@
 #    By: agengemb <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 18:01:24 by agengemb          #+#    #+#              #
-#    Updated: 2023/11/04 18:35:34 by agengemb         ###   ########.fr        #
+#    Updated: 2023/11/20 17:10:30 by agengemb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -std=c++98 -MMD
-NAME = first_cog
-SRC= BureauCrat.cpp main.cpp
+NAME = with_forms
+SRC= Bureaucrat.cpp Form.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}
 
