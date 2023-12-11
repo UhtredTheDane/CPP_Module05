@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:53:41 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/21 18:10:32 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:17:10 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # include "Bureaucrat.hpp"
 # include <string>
-class BureauCrat;
+
+class Bureaucrat;
 
 class AForm
 {
@@ -29,9 +30,9 @@ class AForm
 		int getGradeToExec(void) const;
 		bool getIsSigned(void) const;
 		std::string const& getName(void) const;
-		void beSigned(BureauCrat const& b);
-		void checkGradeToExec(BureauCrat const& executor) const;
-		virtual void execute(BureauCrat const& executor) const = 0;
+		void beSigned(Bureaucrat const& b);
+		void checkGradeToExec(Bureaucrat const& executor) const;
+		virtual void execute(Bureaucrat const& executor) const = 0;
 
 		class GradeTooHighException: public std::exception
 		{

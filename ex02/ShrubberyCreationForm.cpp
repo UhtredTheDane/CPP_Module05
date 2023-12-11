@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:57:12 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/21 18:06:26 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:19:05 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 	return (*this);
 }
 
-void ShrubberyCreationForm::execute(BureauCrat const& executor) const
+void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 {
 	std::string file_name;
 

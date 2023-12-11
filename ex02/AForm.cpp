@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:53:45 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/21 18:10:52 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:18:31 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,9 @@ AForm::AForm(std::string const& name, int const grade_to_sign, int const grade_t
 {
 	this->is_signed = false;
 	std::cout << "AForm's constructor called" << std::endl;
-	if (grade_to_sign < 1)
+	if (grade_to_sign < 1 || grade_to_exec < 1)
 		throw (AForm::GradeTooHighException());
-	else if (grade_to_sign > 150)
-		throw (AForm::GradeTooLowException());
-	if (grade_to_exec < 1)
-		throw (AForm::GradeTooHighException());
-	else if (grade_to_exec > 150)
+	else if (grade_to_sign > 150 || grade_to_exec > 150)
 		throw (AForm::GradeTooLowException());
 }
 
@@ -60,7 +56,7 @@ AForm& AForm::operator=(AForm const& toAffect)
 	return (*this);
 }
 
-void AForm::beSigned(BureauCrat const &b)
+void AForm::beSigned(Bureaucrat const &b)
 {
 	if (b.getGrade() > this->grade_to_sign)
 		throw (AForm::GradeTooLowException());
@@ -71,7 +67,7 @@ void AForm::beSigned(BureauCrat const &b)
 		
 }
 
-void AForm::checkGradeToExec(BureauCrat const& executor) const
+void AForm::checkGradeToExec(Bureaucrat const& executor) const
 {
 	if (!this->is_signed)
 		throw (AForm::IsNotSigned());

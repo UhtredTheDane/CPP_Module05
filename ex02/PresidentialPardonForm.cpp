@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:57:01 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/21 18:09:22 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:19:47 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(PresidentialPardonForm
 	return (*this); 
 }
 
-void PresidentialPardonForm::execute(BureauCrat const& executor) const
+void PresidentialPardonForm::execute(Bureaucrat const& executor) const
 {
 	try
 	{

@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:56:20 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/21 18:03:04 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:19:21 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class RobotomyRequestForm: public AForm
 		RobotomyRequestForm(RobotomyRequestForm const& toCopy);
 		~RobotomyRequestForm(void);
 		RobotomyRequestForm& operator=(RobotomyRequestForm const& toAffect);
-		void execute(BureauCrat const& executor) const;
+		void execute(Bureaucrat const& executor) const;
 	private:
 		std::string target;
 		

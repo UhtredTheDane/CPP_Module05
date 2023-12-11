@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:56:32 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/21 18:08:10 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:19:32 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const& t
 	return (*this);
 }
 
-void RobotomyRequestForm::execute(BureauCrat const& executor) const
+void RobotomyRequestForm::execute(Bureaucrat const& executor) const
 {
 	try
 	{

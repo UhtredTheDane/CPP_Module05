@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:55:27 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/21 17:28:42 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:18:50 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm(ShrubberyCreationForm const& toCopy);
 		~ShrubberyCreationForm(void);
 		ShrubberyCreationForm& operator=(ShrubberyCreationForm const& toAffect);
-		virtual void execute(BureauCrat const& executor) const;
+		virtual void execute(Bureaucrat const& executor) const;
 	
 	private:
 		std::string target;
