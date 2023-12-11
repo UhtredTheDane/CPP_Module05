@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:02:45 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/20 16:11:29 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/11 16:16:43 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 # include <iostream>
 # include <exception>
 
-class BureauCrat
+class Bureaucrat
 {
 	public:
-		BureauCrat(void);
-		~BureauCrat(void);
-		BureauCrat(BureauCrat const& toCopy);
-		BureauCrat(std::string const& name, int grade);
-		BureauCrat& operator=(BureauCrat const& toAffect);
+		Bureaucrat(void);
+		~Bureaucrat(void);
+		Bureaucrat(Bureaucrat const& toCopy);
+		Bureaucrat(std::string const& name, int grade);
+		Bureaucrat& operator=(Bureaucrat const& toAffect);
 		std::string const& getName(void) const;
 		int getGrade(void) const;
 		void increment(void);
@@ -47,6 +47,6 @@ class BureauCrat
 
 };
 
-std::ostream &operator<<(std::ostream &flux, BureauCrat const& b);
+std::ostream &operator<<(std::ostream &flux, Bureaucrat const& b);
 
 #endif

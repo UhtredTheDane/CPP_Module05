@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:53:41 by agengemb          #+#    #+#             */
-/*   Updated: 2023/11/21 14:18:25 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/11 16:48:58 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FORM_HPP
 
 # include "Bureaucrat.hpp"
-class BureauCrat;
+class Bureaucrat;
 
 class Form
 {
@@ -28,7 +28,7 @@ class Form
 		int getGradeToExec(void) const;
 		bool getIsSigned(void) const;
 		std::string const& getName(void) const;
-		void beSigned(BureauCrat& b);
+		void beSigned(Bureaucrat& b);
 
 		class GradeTooHighException: public std::exception
 		{
