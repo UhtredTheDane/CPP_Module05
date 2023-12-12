@@ -11,8 +11,8 @@
 # **************************************************************************** #
 
 CC = c++
-CFLAGS = -std=c++98 -MMD
-NAME = first_cog
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD
+NAME = several_forms
 SRC= Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}

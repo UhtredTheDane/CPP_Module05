@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC = c++
-CFLAGS = -std=c++98 -MMD
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD
 NAME = with_forms
 SRC= Bureaucrat.cpp Form.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
