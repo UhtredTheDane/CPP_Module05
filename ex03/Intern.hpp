@@ -26,10 +26,10 @@ class Intern
 		Intern(Intern const& toCopy);
 		~Intern(void);
 		Intern& operator=(Intern const& toAffect);
-		AForm* createShrubberyForm(std::string &target);
-		AForm* createRobotomyForm(std::string &target);
-		AForm* createPresidentialForm(std::string &target);
-		AForm* makeForm(std::string const& form_type, std::string &target);		
+		AForm* createShrubberyForm(std::string const& target);
+		AForm* createRobotomyForm(std::string const& target);
+		AForm* createPresidentialForm(std::string const& target);
+		AForm* makeForm(std::string const& form_type, std::string const&target);		
 
 		class FormDoesntExistException: public std::exception
 		{
