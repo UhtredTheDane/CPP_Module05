@@ -44,30 +44,22 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 	return (*this);
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
+void ShrubberyCreationForm::makeExecute(void) const
 {
 	std::string file_name;
 
-	try
-	{
-		this->checkGradeToExec(executor);
-		file_name = this->target;
-		file_name.append("_shrubbery");
-		std::cout << "File " << file_name << " created" << std::endl;
-		std::ofstream stream(file_name.c_str());
-		stream	<< "      /\\\n"
-				<< "     /\\*\\\n"    
-				<< "    /\\O\\*\\\n"    
-				<< "   /*/\\/\\/\\\n" 
-				<< "  /\\O\\/\\*\\/\\\n" 
-				<< " /\\*\\/\\*\\/\\/\\\n"
-				<< "/\\O\\/\\/*/\\/O/\\\n"
-				<< "      ||\n"
-				<< "      ||\n"
-				<< "      ||\n";	    
-	}
-	catch (std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	file_name = this->target;
+	file_name.append("_shrubbery");
+	std::cout << "File " << file_name << " created" << std::endl;
+	std::ofstream stream(file_name.c_str());
+	stream	<< "      /\\\n"
+			<< "     /\\*\\\n"    
+			<< "    /\\O\\*\\\n"    
+			<< "   /*/\\/\\/\\\n" 
+			<< "  /\\O\\/\\*\\/\\\n" 
+			<< " /\\*\\/\\*\\/\\/\\\n"
+			<< "/\\O\\/\\/*/\\/O/\\\n"
+			<< "      ||\n"
+			<< "      ||\n"
+			<< "      ||\n";	    
 }

@@ -23,7 +23,7 @@ class PresidentialPardonForm: public AForm
 		PresidentialPardonForm(PresidentialPardonForm const& toCopy);
 		~PresidentialPardonForm(void);
 		PresidentialPardonForm& operator=(PresidentialPardonForm const& toAffect);
-		virtual void execute(Bureaucrat const& executor) const;	
+		virtual void makeExecute(void) const;	
 	
 	private:
 		std::string const target;

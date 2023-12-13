@@ -44,19 +44,11 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const& t
 	return (*this);
 }
 
-void RobotomyRequestForm::execute(Bureaucrat const& executor) const
+void RobotomyRequestForm::makeExecute(void) const
 {
-	try
-	{
-		this->checkGradeToExec(executor);
-		std::cout << "DRRRR DRRRR DRRRR DRRRR... ";
-		if (std::rand() % 2)
-			std::cout << this->target << " has been robotomized !" << std::endl;
-		else
-			std::cout << "The robotomized on " << this->target << " has been fail !" << std::endl;
-	}
-	catch (std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	std::cout << "DRRRR DRRRR DRRRR DRRRR... ";
+	if (std::rand() % 2)
+		std::cout << this->target << " has been robotomized !" << std::endl;
+	else
+		std::cout << "The robotomized on " << this->target << " has been fail !" << std::endl;
 }

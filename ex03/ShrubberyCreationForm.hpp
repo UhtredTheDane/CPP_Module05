@@ -24,7 +24,7 @@ class ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm(ShrubberyCreationForm const& toCopy);
 		~ShrubberyCreationForm(void);
 		ShrubberyCreationForm& operator=(ShrubberyCreationForm const& toAffect);
-		virtual void execute(Bureaucrat const& executor) const;
+		virtual void makeExecute(void) const;
 	
 	private:
 		std::string const target;

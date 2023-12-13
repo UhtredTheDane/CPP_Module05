@@ -14,6 +14,33 @@
 
 int main(void)
 {
+	Intern someRandomIntern;
+	
+	{
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("shrubbery creation", "Christmas");
+		Bureaucrat pb("Pam Beesly", 137);
+		pb.signForm(rrf);
+		pb.executeForm(rrf);
+		std::cout << std::endl;
+	}
 
+	{
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		Bureaucrat jh("Jim Halpert", 45);
+		jh.signForm(rrf);
+		jh.executeForm(rrf);
+		std::cout << std::endl;
+	}
+
+	{
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("presidential pardon", "Dwight Shrut");
+		Bureaucrat ms;
+		ms.signForm(rrf);
+		jh.executeForm(rrf);
+		std::cout << std::endl;
+	}
 	return (0);
 }
