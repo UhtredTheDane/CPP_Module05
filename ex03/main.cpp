@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:57:38 by agengemb          #+#    #+#             */
-/*   Updated: 2023/12/13 16:00:54 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/12/14 13:23:00 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int main(void)
 {
 	Intern someRandomIntern;
-	
 	{
 		AForm* rrf;
 		rrf = someRandomIntern.makeForm("shrubbery creation", "Christmas");
@@ -23,8 +22,8 @@ int main(void)
 		pb.signForm(*rrf);
 		pb.executeForm(*rrf);
 		std::cout << std::endl;
+		delete rrf;
 	}
-
 	{
 		AForm* rrf;
 		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
@@ -32,8 +31,8 @@ int main(void)
 		jh.signForm(*rrf);
 		jh.executeForm(*rrf);
 		std::cout << std::endl;
+		delete rrf;
 	}
-
 	{
 		AForm* rrf;
 		rrf = someRandomIntern.makeForm("presidential pardon", "Dwight Shrut");
@@ -41,7 +40,23 @@ int main(void)
 		ms.signForm(*rrf);
 		ms.executeForm(*rrf);
 		std::cout << std::endl;
+		delete rrf;
 	}
-
+	{
+		AForm* rrf;
+		try
+		{
+			rrf = someRandomIntern.makeForm("presidential", "Dwight Shrut");
+			Bureaucrat ms;
+			ms.signForm(*rrf);
+			ms.executeForm(*rrf);
+			std::cout << std::endl;
+			delete rrf;
+		}
+		catch (std::exception& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+	}
 	return (0);
 }
