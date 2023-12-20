@@ -27,7 +27,7 @@ RobotomyRequestForm::RobotomyRequestForm(std::string const& target)
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const& toCopy)
-	: AForm(toCopy)
+	: AForm(toCopy), target(toCopy.target)
 {
 	std::cout << "RobotomyRequestForm's copy constructor called" << std::endl;
 }
