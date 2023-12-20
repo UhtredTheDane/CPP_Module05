@@ -27,7 +27,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string const& target)
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const& toCopy)
-	: AForm(toCopy)
+	: AForm(toCopy), target(toCopy.target)
 {
 	std::cout << "ShrubberyCreationForm's copy constructor called" << std::endl;
 }
