@@ -27,7 +27,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string const& target)
 }
 
 PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const& toCopy)
-	: AForm(toCopy)
+	: AForm(toCopy), target(toCopy.target)
 {
 	std::cout << "PresidentialPardonForm's copy constructor called" << std::endl;
 }
